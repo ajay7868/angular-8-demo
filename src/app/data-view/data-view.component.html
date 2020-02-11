@@ -1,0 +1,23 @@
+<div class="col-md-6" style="margin:0 auto" >
+    <h2 class="btn btn-success">  Details</h2>
+  
+    <!-- <button class="btn btn-danger" (click)="addUser()"> Add User</button> -->
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <!-- <th class="hidden">Id</th> -->
+        <th>day</th>
+        <th>dateTime</th>
+        
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of users"> 
+         <td>{{user.day}}</td>
+        <td>{{user.dateTime | date}} </td>
+        <td>
+          <button class="btn btn-success" (click)="editData(user)" style="margin-left: 20px;"> Edit</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
